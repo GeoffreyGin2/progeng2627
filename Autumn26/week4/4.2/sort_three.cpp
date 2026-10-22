@@ -15,29 +15,27 @@ void sort_two_numbers(double& s1, double& s2, double& s3){
     // so that the output is as in the examples below
     if (s1>=s2 && s1>=s3){
         if(s2 > s3){
-            double temp = s1;
-            s1 = s3;
-            s3 = temp;
+            myswap(s1,s3);
         }
         else{
-            double temp = s1;
-            s1 = s2;
-            s2 = s3;
-            s3 = temp;
+            myswap(s2,s3);
+            myswap(s1,s3);
         }
         
     }
     else if (s2>=s1 && s2>=s3){
-        if(s2 > s3){
-            double temp = s1;
-            s1 = s3;
-            s3 = temp;
+        if(s1 > s3){
+            myswap(s1,s3);
+            myswap(s3,s2);
         }
         else{
-            double temp = s1;
-            s1 = s2;
-            s2 = s3;
-            s3 = temp
+            myswap(s2,s3);
+        }
+        
+    }
+    else{
+        if(s1 > s2){
+            myswap(s1,s2);
         }
         
     }
